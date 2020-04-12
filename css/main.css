@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+body {
+  font-family: 'Poppins';
+  margin: 0;
+}
+
+.container {
+  width: 95%;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 90%;
+  }
+}
+
+nav {
+  width: 100%;
+  background: #27519E;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+@media (min-width: 768px) {
+  nav .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+nav .navbar-brand {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+nav .navbar-brand h1, nav .navbar-brand .bars {
+  color: white;
+}
+
+nav .navbar-brand .bars {
+  font-size: 35px;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  nav .navbar-brand .bars {
+    display: none;
+  }
+}
+
+nav .nav-list {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  nav .nav-list {
+    display: block;
+  }
+}
+
+.nav-ul {
+  list-style: none;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .nav-ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.nav-ul li {
+  margin: 40px 0;
+}
+
+@media (min-width: 768px) {
+  .nav-ul li {
+    margin: 0px;
+    margin-right: 40px;
+  }
+}
+
+.nav-ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+}
+
+.side-drawer {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  right: -550px;
+  width: 60%;
+  height: 100vh;
+  background: #2b2b2b;
+  padding: 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: .4s ease;
+  transition: .4s ease;
+}
+
+@media (min-width: 768px) {
+  .side-drawer {
+    display: none;
+  }
+}
+
+.side-drawer.show {
+  opacity: 1;
+  right: 0;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  height: 100vh;
+  z-index: -1;
+  opacity: 0;
+  -webkit-transition: .4s ease;
+  transition: .4s ease;
+}
+
+.backdrop.show {
+  z-index: 1;
+  opacity: 1;
+}
