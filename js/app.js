@@ -92,9 +92,12 @@ $(function () {
 
 $(window).scroll(function () {
   if ($(window).scrollTop() >= 500) {
-  $('.navbar').css('background','#0984e3');
+  $('.navbar').css('background','#3867d6');
   } else {
   $('.navbar').css('background','transparent');
   }
   });
+
+
+
 

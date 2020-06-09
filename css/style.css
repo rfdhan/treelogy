@@ -70,7 +70,7 @@ body{
     position: fixed;
     bottom: 0;
     left: 0;
-    background: #341f97;
+    background: #3867d6;
     box-shadow: 0px -3px 30px rgba(192, 192, 192, 0.082);
     border-radius: 10px 10px 0px 0px;
     flex: auto;
@@ -96,6 +96,12 @@ body{
 }
 #mobile-nav .mobile-nav ul li:hover i{
     transition: .4s ease;
+}
+#mobile-nav .mobile-nav ul li button{
+    background: transparent;
+    outline: none;
+    color: white;
+    border: none;
 }
 /* #mobile-nav .mobile-nav ul li:hover img{
     filter: invert(57%) sepia(66%) saturate(3745%) hue-rotate(188deg) brightness(99%) contrast(90%);
@@ -231,7 +237,7 @@ nav i{
     background-image: linear-gradient(to right,#11B9BE, #760CA3, #FD6585);
     outline: none;
     border-radius: 50px;
-    padding: 20px 30px;
+    padding: 10px 20px;
     color: white;
     font-size: 16px;
     font-weight: 300;
@@ -415,7 +421,120 @@ nav i{
 #feature-iam img{
     height: 300px;
 }
+
 /* main-two */
+#main-dua .row .col-sm-3{
+    margin: 20px;
+}
+#main-dua .row .col-sm-3 h2{
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    margin-left: 0px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 36px;
+    color: #3867d6;
+}
+#main-dua .col-sm-3 span{
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 1px;
+    font-family: 'Poppins', sans-serif;
+    color: #000;
+}
+#main-dua .col-sm-3 p{
+    margin-top: 10px;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    color: #7f8fa6;
+}
+#main-dua button{
+    background-image: linear-gradient(to right,#3867d6, rgb(0, 223, 223));
+    outline: none;
+    border-radius: 50px;
+    padding: 10px 10px;
+    color: white;
+    font-size: 14px;
+    font-weight: 30 0;
+    font-family: 'Poppins', sans-serif;
+    background-size: 400%;
+    transition: 1s;
+    z-index: 1;
+    letter-spacing: 1px;
+    box-shadow: 5px 10px 40px rgba(82, 16, 82, 0.37);
+    margin-top: 10px;
+}
+#main-dua button:hover{
+    background-position: right;
+    animation: animate 8s linear infinite;
+}
+#main-dua{
+    background: #f5f6fa;
+
+}
+#main-dua .container-fluid .row{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    min-height: 100vh;
+    padding: 80px 0px 80px 0px;
+}
+#main-dua .container-fluid .row .col-sm-8{
+    position: relative;
+    /* max-width: 100%; */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: minmax(100px, auto);
+    margin: 20px;
+    grid-auto-flow: dense;
+    grid-gap: 10px;
+
+}
+
+#main-dua .container-fluid .col-sm-8 .paketgrid{
+    background: #00a8ff;
+    padding: 10px;
+    display: grid;
+    font-size: 18px;
+    place-items: center;
+    text-align: center;
+    color: #fff;
+    transition: 0.5s;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.274);
+    font-family: 'Poppins', sans-serif;
+}
+#main-dua .container-fluid .col-sm-8 .paketgrid:hover{
+    background: #192a56;
+}
+#main-dua .container-fluid .col-sm-8 .paketgrid img{
+    position: relative;
+    max-width: 50px;
+    margin-bottom: 10px;
+}
+#main-dua .container-fluid .col-sm-8 .paketgrid:nth-child(1){
+    grid-column: span 1;
+    grid-row: span 1;
+}
+#main-dua .container-fluid .col-sm-8 .paketgrid:nth-child(2){
+    grid-column: span 1;
+    grid-row: span  2;
+}
+#main-dua .container-fluid .col-sm-8 .paketgrid:nth-child(3){
+    grid-column: span 1;
+    grid-row: span 1;
+}
+#main-dua .container-fluid .col-sm-8 .paketgrid:nth-child(4){
+    grid-column: span 1;
+    grid-row: span 1;
+}
+#main-dua .container-fluid .col-sm-8 .paketgrid:nth-child(5){
+    grid-column: span 1;
+    grid-row: span 2;
+}
+#main-dua .container-fluid .col-sm-8 .paketgrid:nth-child(6){
+    grid-column: span 1;
+    grid-row: span 1;
+}
 /* paket */
 #service{
     padding-top: 20px;
@@ -530,6 +649,9 @@ nav i{
     #subscribe{
         display: none;
     }
+    #chat{
+        display: none;
+    }
 }
 
 
@@ -541,7 +663,7 @@ nav i{
     text-align: center;
 }
 #email-box i{
-    background-color: #1dd1a1;
+    background-color: #130f40;
     width: 50px;
     line-height: 50px;
     color: white;font-size: 20px;
@@ -560,7 +682,7 @@ nav i{
 #email-box .btn{
     padding: 0 10px;
     color: white;
-    background-color: #1dd1a1;
+    background-color: #130f40;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: 20px;
@@ -613,7 +735,7 @@ nav i{
     box-shadow: 1px 1px 20px rgba(138, 137, 137, 0.356);
     padding: 20px 0px 20px 0px;
     margin-bottom: 20px;
-    background: #5f27cd;
+    /* background: #5f27cd; */
     /* background: linear-gradient(to right, #6B73FF, #000DFF); */
     overflow: hidden;
 }
@@ -624,10 +746,13 @@ nav i{
     margin-bottom: 20px;
 }
 #ceo-treelogy .col-sm-12 h1{
-    color: white;
+    color: #3867d6;
     font-family: 'Roboto Condensed', sans-serif;
     text-transform: uppercase;
-    font-size: 24px;
+    font-size: 30px;
+}
+#ceo-treelogy .col-sm-12 span{
+    color: #718093;
 }
 
 
@@ -641,7 +766,7 @@ nav i{
     margin-top: 10px;
 }
 #ceo-treelogy .pic img{
-    border: 10px solid #f8f8f8;
+    border: 10px solid #718093;
     border-radius: 50%;
     transition: all 0.3s ease 0s;
     width: 220px;
@@ -652,10 +777,10 @@ nav i{
     position: relative;
     margin: 25px 0 10px 0;
     font-size: 20px;
-    font-weight: bold;
+    letter-spacing: 2px;
     text-transform: uppercase;
     font-family: 'Poppins', sans-serif;
-    color: white;
+    color: #3867d6;
 }
 #ceo-treelogy .post{
     overflow: hidden;
@@ -663,7 +788,7 @@ nav i{
     margin-top: 10px;
     /* margin-bottom: 5px; */
     font-size: 15px;
-    color: white;
+    color: #718093;
     text-transform: uppercase;
     opacity: 1;
     transition: all 0.3s ease 0s;
@@ -688,7 +813,7 @@ nav i{
 #ceo-treelogy .team-social > li > a{
     font-size: 20px;
     font-weight: 400;
-    color: white;
+    color: #3867d6;
     transition: all 0.3s ease 0s;
 }
 #ceo-treelogy .our-team:hover{
@@ -696,7 +821,7 @@ nav i{
     transition: all 0.5s ease-in-out;
 }
 #ceo-treelogy .our-team:hover .pic img{
-    border-color: white;
+    border-color: #3867d6;
 }
 #ceo-treelogy .our-team:hover .team-social{
     opacity: 1;
@@ -754,7 +879,27 @@ nav i{
     letter-spacing: 1px;
     font-family: 'Poppins', sans-serif;
 }
-
+#text-ahli button{
+    background-image: linear-gradient(to right,#0984e3, rgb(0, 223, 223));
+    outline: none;
+    border-radius: 50px;
+    padding: 10px 10px;
+    color: white;
+    font-size: 14px;
+    font-weight: 30 0;
+    font-family: 'Poppins', sans-serif;
+    background-size: 400%;
+    transition: 1s;
+    z-index: 1;
+    letter-spacing: 1px;
+    box-shadow: 5px 10px 40px rgba(82, 16, 82, 0.37);
+    margin-top: 10px;
+}
+#text-ahli button:hover{
+    background-position: right;
+    color: white;
+    animation: animate 8s linear infinite;
+}
 
 /* semifooter */
 #semi-footer{
@@ -773,7 +918,7 @@ nav i{
 #semi-text h3{
     padding: 10px 0px 0px 0px;
     font-size: 18px;
-    color: #1dd1a1;
+    color: #3867d6;
     font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
     text-align: center;
@@ -823,7 +968,7 @@ nav i{
 }
 #form-consul input{
     display: flex;
-    border: 1px solid #1dd1a1;
+    border: 1px solid #3867d6;
     outline: none;
 }
 #form-consul label{
@@ -831,7 +976,7 @@ nav i{
     font-family: 'Roboto Condensed', sans-serif;
 }
 #inputPesan{
-    border: 1px solid #1dd1a1;
+    border: 1px solid #3867d6;
 }
 .btn-con{
     /* width: auto; */
@@ -913,11 +1058,11 @@ footer{
     .fabicon{
         position: fixed;
         bottom: 32px;
-        right: 32px;
+        right: 33px;
         background: #341f97;
         color: white;
-        height: 60px;
-        width: 60px;
+        height: 50px;
+        width: 50px;
         border-radius: 50%;
         z-index: 3;
         display: flex;
@@ -937,8 +1082,8 @@ footer{
     }
     .box{
         position: fixed;
-        bottom: 44px;
-        right: 5px;
+        bottom: 30px;
+        right: 0px;
         height: 0px;
         transition-delay: 0.3s;
         width: 80px;
