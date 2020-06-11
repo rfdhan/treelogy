@@ -14,8 +14,65 @@ btn.addEventListener('click', () => {
 });
 
 
-// scroll navbar
-// scroll
+
+// Navbar show & hiden 
+// $(function () {
+//   var lastScrollTop = 0;
+//   var $navbar = $('.navbar');
+
+//   $(window).scroll(function(event){
+//     var st = $(this).scrollTop();
+
+//     if (st > lastScrollTop) {
+//       $navbar.hide()
+//     } else {
+//       $navbar.show()
+//     }
+//     lastScrollTop = st;
+//   });
+// });
+
+
+
+// $(window).scroll(function () {
+//   if ($(window).scrollTop() >= 500) {
+//   $('.navbar').css('background','#3867d6');
+//   } else {
+//   $('.navbar').css('background','transparent');
+//   }
+//   });
+
+
+
+const backToTopButton = document.querySelector("#back-top");
+
+window.addEventListener("scroll", scrollFunction);
+
+function scrollFunction () {
+  if (window.pageYOffset > 300){
+    if (!backToTopButton.classList.contains("btnEntrance")){
+      backToTopButton.classList.remove("btnExit");
+      backToTopButton.classList.add("btnEntrance");
+      backToTopButton.style.display = "block";
+    }
+  }
+  else{
+    if(backToTopButton.classList.contains("btnEntrance")){
+      backToTopButton.classList.remove("btnEntrance");
+      backToTopButton.classList.add("btnExit");
+      setTimeout(function(){
+      backToTopButton.style.display = "none";
+      }, 250);
+      backToTopButton
+    }
+  }
+}
+
+backToTopButton.addEventListener("click", backToTop);
+function backToTop(){
+  window.scrollTo (0, 0);
+}
+
 $('a[href*="#"]')
     // Remove links that don't actually link to anything
     .not('[href="#"]')
@@ -36,7 +93,7 @@ $('a[href*="#"]')
                 event.preventDefault();
                 $('html, body').animate({
                     scrollTop: target.offset().top
-                }, 1250, 'easeInOutExpo', function () {
+                }, 500, 'easeInBack', function () {
                     // Callback after animation
                     // Must change focus!
                     var $target = $(target);
@@ -53,51 +110,20 @@ $('a[href*="#"]')
     });
 
 
-//Navbar show & hiden 
-$(function () {
-  var lastScrollTop = 0;
-  var $navbar = $('.navbar');
+var mobilePromo = document.querySelector('.mobilepromo');
+var pictPromoMobile = document.querySelector('.pictpromomobile');
+var closePromo = document.querySelector('.closepromo')
 
-  $(window).scroll(function(event){
-    var st = $(this).scrollTop();
-
-    if (st > lastScrollTop) { // scroll down
-      
-      // use this is jQuery full is used
-      $navbar.hide()
-      
-      // use this to use CSS3 animation
-      // $navbar.addClass("fade-out");
-      // $navbar.removeClass("fade-in");
-      
-      // use this if no effect is required
-      // $navbar.hide();
-    } else { // scroll up
-      
-      // use this is jQuery full is used
-      $navbar.show()
-      
-      // use this to use CSS3 animation
-      // $navbar.addClass("fade-in");
-      // $navbar.removeClass("fade-out");
-      
-      // use this if no effect is required
-      // $navbar.show();
-    }
-    lastScrollTop = st;
-  });
+mobilePromo.addEventListener('click', function(){
+pictPromoMobile.classList.add('pictmobile');
+});
+closePromo.addEventListener('click', function(){
+pictPromoMobile.classList.remove('pictmobile');
 });
 
+var instaFeed = document.querySelector('.instafeed');
+var instagramFeed = document.querySelector('.instagram-feed');
 
-
-$(window).scroll(function () {
-  if ($(window).scrollTop() >= 500) {
-  $('.navbar').css('background','#3867d6');
-  } else {
-  $('.navbar').css('background','transparent');
-  }
-  });
-
-
-
-
+instaFeed.addEventListener('click', function(){
+  instagramFeed.classList.add('insfeed-active');
+});
